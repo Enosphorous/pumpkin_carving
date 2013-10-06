@@ -14,6 +14,8 @@ public class Reference {
 	public static final String LOCALIZATION_PATH = "/assets/pumpkins/lang/";
 	
 	public static final boolean FORCE_DEBUG = false;
+	
+	public static final int LANGUAGE_COUNT = 60;
 
 
 	

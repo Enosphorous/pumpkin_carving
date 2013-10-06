@@ -7,11 +7,15 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
+import enosphorous.pumpkins.local.LocalizationHandler;
 import enosphorous.pumpkins.block.Blocks;
 import enosphorous.pumpkins.client.ClientProxy;
 import enosphorous.pumpkins.handlers.CarvingHandler;
+import enosphorous.pumpkins.handlers.RecipeHandler;
 import enosphorous.pumpkins.item.Items;
 import enosphorous.pumpkins.item.ToolMaterial;
+import enosphorous.pumpkins.world.Generator;
 
 @Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.MOD_VERSION)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
@@ -37,7 +41,12 @@ public class Pumpkin {
         
         Items.init();
         
+        RecipeHandler.init();
+        
+        LocalizationHandler.init();
+        
         MinecraftForge.EVENT_BUS.register(new CarvingHandler());
+        GameRegistry.registerWorldGenerator(new Generator());
 
 	}
 

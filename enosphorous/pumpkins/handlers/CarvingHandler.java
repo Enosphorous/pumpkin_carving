@@ -20,6 +20,7 @@ public class CarvingHandler {
 			
 			event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, Block.pumpkin.blockID);
 			event.entityPlayer.inventory.getCurrentItem().damageItem(1, event.entityPlayer);
+			event.entityPlayer.worldObj.playSoundAtEntity(event.entityPlayer, "random.click", 1F, 1F);
 			
 			
 		}
@@ -33,6 +34,7 @@ public class CarvingHandler {
 					
 					event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, Blocks.carved_melon.blockID);
 					event.entityPlayer.inventory.getCurrentItem().damageItem(1, event.entityPlayer);
+					event.entityPlayer.worldObj.playSoundAtEntity(event.entityPlayer, "random.click", 1F, 1F);
 					
 					
 				}
