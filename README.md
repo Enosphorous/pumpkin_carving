@@ -12,10 +12,9 @@
 
 - A minimod for minecraft that allows you to carve pumpkins and melons using the new carver toolset. Have fun!
 
-## Features for 0.0.1
-        - 5 pumpkin/melon stages (carving process)
-        - Drop pumpkin/melon seeds and possibly pumpkin innards when carving
-        - Pumpkin juice/pumpkin stew
+## Features for 0.0.1 (TO DO)
+        - Make carved pumpkin face you when placed.
+
         
         
 
