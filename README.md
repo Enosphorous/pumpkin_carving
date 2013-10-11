@@ -16,6 +16,7 @@ Thanks to everyone who helped me in the creation of this mod!
 - A minimod for minecraft that allows you to carve pumpkins and melons using the new carver toolset. Have fun!
 
 ## Changelog
+           v0.0.1
            - General release
 
         
