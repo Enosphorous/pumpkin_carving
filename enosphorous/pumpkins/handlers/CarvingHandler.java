@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.MathHelper;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import enosphorous.pumpkins.block.Blocks;
@@ -24,7 +25,9 @@ public class CarvingHandler {
 			event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, Blocks.pumpkin_dropper.blockID);
 			event.entityPlayer.worldObj.destroyBlock(event.x, event.y, event.z, true);
 			
-			event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, Block.pumpkin.blockID);
+			int playerFacing = MathHelper.floor_double((double)((event.entityPlayer.rotationYaw * 4F) / 360f) + 0.5D) &3;
+			
+			event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, Block.pumpkin.blockID, (2 + playerFacing) % 4, 0);
 			event.entityPlayer.inventory.getCurrentItem().damageItem(1, event.entityPlayer);
 			event.entityPlayer.worldObj.playSoundAtEntity(event.entityPlayer, "random.wood_click", 1F, 1F);
 			
@@ -39,7 +42,9 @@ public class CarvingHandler {
 					event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, Blocks.melon_dropper.blockID);
 					event.entityPlayer.worldObj.destroyBlock(event.x, event.y, event.z, true);
 
-					event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, Blocks.carved_melon.blockID);
+					int playerFacing = MathHelper.floor_double((double)((event.entityPlayer.rotationYaw * 4F) / 360f) + 0.5D) &3;
+					
+					event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, Blocks.carved_melon.blockID, (2 + playerFacing) % 4, 0);
 					event.entityPlayer.inventory.getCurrentItem().damageItem(1, event.entityPlayer);
 					event.entityPlayer.worldObj.playSoundAtEntity(event.entityPlayer, "random.wood_click", 1F, 1F);
 					
