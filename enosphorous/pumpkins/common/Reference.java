@@ -4,10 +4,10 @@ import net.minecraft.util.DamageSource;
 
 public class Reference {
 	
-	public static final String MOD_ID = "pumpkin_carving";
-	public static final String MOD_NAME = "Pumpkin Realism";
-	public static final String MOD_VERSION = "ALPHA 0.0.1";
-	public static final String MOD_INSTANCE = "pumpkin_carving";
+	public static final String MOD_ID = "carving";
+	public static final String MOD_NAME = "Carving";
+	public static final String MOD_VERSION = "0.0.1";
+	public static final String MOD_INSTANCE = "carving";
 	
 	public static final String SERVER_PATH = "enosphorous.pumpkins.common.CommonProxy";
 	public static final String CLIENT_PATH = "enosphorous.pumpkins.client.ClientProxy";
