@@ -51,6 +51,24 @@ public class CarvingHandler {
 					
 				}
 		
+		if(event.entityPlayer.worldObj.getBlockId(event.x, event.y, event.z) == Blocks.carved_melon.blockID && event.entityPlayer.inventory.getCurrentItem() !=null && event.entityPlayer.inventory.getCurrentItem().itemID == Block.torchWood.blockID){
+
+			int playerFacing = MathHelper.floor_double((double)((event.entityPlayer.rotationYaw * 4F) / 360f) + 0.5D) &3;
+			
+					event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, Blocks.melon_o_lantern.blockID, (2 + playerFacing) % 4, 0);
+					
+					
+				}
+		
+		if(event.entityPlayer.worldObj.getBlockId(event.x, event.y, event.z) == Block.pumpkin.blockID && event.entityPlayer.inventory.getCurrentItem() !=null && event.entityPlayer.inventory.getCurrentItem().itemID == Block.torchWood.blockID){
+
+			int playerFacing = MathHelper.floor_double((double)((event.entityPlayer.rotationYaw * 4F) / 360f) + 0.5D) &3;
+			
+			event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, Block.pumpkinLantern.blockID, (2 + playerFacing) % 4, 0);
+			
+			
+		}
+		
 	}
 	
 }
