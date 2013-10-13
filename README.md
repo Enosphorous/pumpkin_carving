@@ -17,7 +17,7 @@ Thanks to everyone who helped me in the creation of this mod!
 
 ## Changelog
            v0.0.1
-           - General release
+           - Release for 1.6.4
 
         
         
