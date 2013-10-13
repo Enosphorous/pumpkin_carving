@@ -46,7 +46,9 @@ public class Pumpkin {
         
         LocalizationHandler.init();
         
+        if (ConfigLoader.loot){
         LootHandler.dewheedlize();
+        }
         
         MinecraftForge.EVENT_BUS.register(new CarvingHandler());
         GameRegistry.registerWorldGenerator(new Generator());

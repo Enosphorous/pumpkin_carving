@@ -19,8 +19,11 @@ public class ConfigLoader {
 	public static int     iron_carverID                      = 2947;
 	public static int     gold_carverID                      = 2948;
 	public static int     diamond_carverID                   = 2949;
+	
+	public static boolean loot                               = true;
 
     static final String   IDs                                = "ID CONFIGURATION";
+    static final String   LOOTS                              = "GLOBAL CONFIGURATION";
 
     public static void load(Configuration config) {
 
@@ -36,6 +39,8 @@ public class ConfigLoader {
             ConfigLoader.iron_carverID = config.get(ConfigLoader.IDs, "iron carver id", 2947).getInt(2947);
             ConfigLoader.gold_carverID = config.get(ConfigLoader.IDs, "gold carver id", 2948).getInt(2948);
             ConfigLoader.diamond_carverID = config.get(ConfigLoader.IDs, "diamond carver id", 2949).getInt(2949);
+            
+            ConfigLoader.loot = config.get(ConfigLoader.LOOTS, "dungeon loot enabled", true).getBoolean(true);
             
             System.out.println("[PUMPKIN CARVING] Configuration file loaded.");
             
