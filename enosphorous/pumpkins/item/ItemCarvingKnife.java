@@ -4,21 +4,15 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumAction;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-
-import com.google.common.collect.Multimap;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import enosphorous.pumpkins.api.ICarving;
 
-public class ItemCarvingKnife extends Item
+public class ItemCarvingKnife extends Item implements ICarving
 {
     private float weaponDamage;
     private final EnumToolMaterial toolMaterial;
@@ -108,5 +102,68 @@ public class ItemCarvingKnife extends Item
     {
         return this.toolMaterial.toString();
     }
+
+	@Override
+	public Item toolMaterialItem() {
+		
+		if (this.itemID == Items.wood_carver.itemID){
+			return null;
+		}
+		else if (this.itemID == Items.stone_carver.itemID){
+			return null;
+		}
+		else if (this.itemID == Items.iron_carver.itemID){
+			return Item.ingotIron;
+		}
+		else if (this.itemID == Items.gold_carver.itemID){
+			return Item.ingotGold;
+		}
+		else if (this.itemID == Items.diamond_carver.itemID){
+			return Item.diamond;
+		}
+		return null;
+	}
+
+	@Override
+	public int durability() {
+		
+		if (this.itemID == Items.wood_carver.itemID){
+			return 24;
+		}
+		else if (this.itemID == Items.stone_carver.itemID){
+			return 50;
+		}
+		else if (this.itemID == Items.wood_carver.itemID){
+			return 115;
+		}
+		else if (this.itemID == Items.gold_carver.itemID){
+			return 18;
+		}
+		else if (this.itemID == Items.diamond_carver.itemID){
+			return 240;
+		}
+		return 0;
+	}
+
+	@Override
+	public Block toolMaterialBlock() {
+		
+		if (this.itemID == Items.wood_carver.itemID){
+			return Block.planks;
+		}
+		else if (this.itemID == Items.stone_carver.itemID){
+			return Block.cobblestone;
+		}
+		else if (this.itemID == Items.iron_carver.itemID){
+			return null;
+		}
+		else if (this.itemID == Items.gold_carver.itemID){
+			return null;
+		}
+		else if (this.itemID == Items.diamond_carver.itemID){
+			return null;
+		}
+		return null;
+	}
 
 }
