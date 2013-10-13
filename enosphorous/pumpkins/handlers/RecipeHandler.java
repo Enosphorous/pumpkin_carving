@@ -15,11 +15,11 @@ public class RecipeHandler {
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.melon_o_lantern, 1, 0), new Object[]{Block.torchWood, Blocks.carved_melon});
 		
 		/**Crafting Pumpkin Carvers*/
-		GameRegistry.addShapedRecipe(new ItemStack(Items.wood_carver, 1, 0), new Object[]{" # ", "@  ", '@', Item.stick, '#', Block.planks});
-		GameRegistry.addShapedRecipe(new ItemStack(Items.stone_carver, 1, 0), new Object[]{" # ", "@  ", '@', Item.stick, '#', Block.cobblestone});
-		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_carver, 1, 0), new Object[]{" # ", "@  ", '@', Item.stick, '#', Item.ingotIron});
-		GameRegistry.addShapedRecipe(new ItemStack(Items.gold_carver, 1, 0), new Object[]{" # ", "@  ", '@', Item.stick, '#', Item.ingotGold});
-		GameRegistry.addShapedRecipe(new ItemStack(Items.diamond_carver, 1, 0), new Object[]{" # ", "@  ", '@', Item.stick, '#', Item.diamond});
+		GameRegistry.addShapedRecipe(new ItemStack(Items.wood_carver, 1, 0), new Object[]{"## ", " # ", "@  ", '@', Item.stick, '#', Block.planks});
+		GameRegistry.addShapedRecipe(new ItemStack(Items.stone_carver, 1, 0), new Object[]{"## ", " # ", "@  ", '@', Item.stick, '#', Block.cobblestone});
+		GameRegistry.addShapedRecipe(new ItemStack(Items.iron_carver, 1, 0), new Object[]{"## ", " # ", "@  ", '@', Item.stick, '#', Item.ingotIron});
+		GameRegistry.addShapedRecipe(new ItemStack(Items.gold_carver, 1, 0), new Object[]{"## ", " # ", "@  ", '@', Item.stick, '#', Item.ingotGold});
+		GameRegistry.addShapedRecipe(new ItemStack(Items.diamond_carver, 1, 0), new Object[]{"## ", " # ", "@  ", '@', Item.stick, '#', Item.diamond});
 		
 	}
 
