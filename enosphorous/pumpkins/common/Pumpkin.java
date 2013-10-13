@@ -12,6 +12,7 @@ import enosphorous.pumpkins.local.LocalizationHandler;
 import enosphorous.pumpkins.block.Blocks;
 import enosphorous.pumpkins.client.ClientProxy;
 import enosphorous.pumpkins.handlers.CarvingHandler;
+import enosphorous.pumpkins.handlers.LootHandler;
 import enosphorous.pumpkins.handlers.RecipeHandler;
 import enosphorous.pumpkins.item.Items;
 import enosphorous.pumpkins.item.ToolMaterial;
@@ -44,6 +45,8 @@ public class Pumpkin {
         RecipeHandler.init();
         
         LocalizationHandler.init();
+        
+        LootHandler.dewheedlize();
         
         MinecraftForge.EVENT_BUS.register(new CarvingHandler());
         GameRegistry.registerWorldGenerator(new Generator());
