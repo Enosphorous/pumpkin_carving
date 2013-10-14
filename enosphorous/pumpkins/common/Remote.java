@@ -2,7 +2,7 @@ package enosphorous.pumpkins.common;
 
 import net.minecraft.util.DamageSource;
 
-public class Reference {
+public class Remote {
 	
 	public static final String MOD_ID = "carving";
 	public static final String MOD_NAME = "Carving";
@@ -16,6 +16,21 @@ public class Reference {
 	public static final boolean FORCE_DEBUG = false;
 	
 	public static final int LANGUAGE_COUNT = 60;
+	
+	public static final String CARVE_SOUND = "random.wood_click";
+	
+	public static final int IRON_LOOT_RARITY = 3;
+	public static final int STONE_LOOT_RARITY = 8;
+	public static final int WOOD_LOOT_RARITY = 13;
+	
+	public static final int WOOD_BONUS_RARITY = 8;
+	public static final int STONE_BONUS_RARITY = 6;
+	
+	public static final int WOOD_DURABILITY = 24;
+	public static final int STONE_DURABILITY = 50;
+	public static final int IRON_DURABILITY = 115;
+	public static final int GOLD_DURABILITY = 18;
+	public static final int DIAMOND_DURABILITY = 200;
 
 
 	

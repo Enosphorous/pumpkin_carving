@@ -8,6 +8,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import enosphorous.pumpkins.block.Blocks;
+import enosphorous.pumpkins.common.Remote;
 import enosphorous.pumpkins.item.Items;
 
 public class CarvingHandler {
@@ -29,7 +30,7 @@ public class CarvingHandler {
 			
 			event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, Block.pumpkin.blockID, (2 + playerFacing) % 4, 0);
 			event.entityPlayer.inventory.getCurrentItem().damageItem(1, event.entityPlayer);
-			event.entityPlayer.worldObj.playSoundAtEntity(event.entityPlayer, "random.wood_click", 1F, 1F);
+			event.entityPlayer.worldObj.playSoundAtEntity(event.entityPlayer, Remote.CARVE_SOUND, 1F, 1F);
 			
 		}
 		
@@ -46,7 +47,7 @@ public class CarvingHandler {
 					
 					event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, Blocks.carved_melon.blockID, (2 + playerFacing) % 4, 0);
 					event.entityPlayer.inventory.getCurrentItem().damageItem(1, event.entityPlayer);
-					event.entityPlayer.worldObj.playSoundAtEntity(event.entityPlayer, "random.wood_click", 1F, 1F);
+					event.entityPlayer.worldObj.playSoundAtEntity(event.entityPlayer, Remote.CARVE_SOUND, 1F, 1F);
 					
 					
 				}

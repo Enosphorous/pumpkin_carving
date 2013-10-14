@@ -18,14 +18,14 @@ import enosphorous.pumpkins.item.Items;
 import enosphorous.pumpkins.item.ToolMaterial;
 import enosphorous.pumpkins.world.Generator;
 
-@Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.MOD_VERSION)
+@Mod(modid=Remote.MOD_ID, name=Remote.MOD_NAME, version=Remote.MOD_VERSION)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class Pumpkin {
 
-	@Instance(Reference.MOD_INSTANCE)
+	@Instance(Remote.MOD_INSTANCE)
 	public static Pumpkin instance;
 	
-    @SidedProxy(clientSide = Reference.CLIENT_PATH, serverSide = Reference.SERVER_PATH)
+    @SidedProxy(clientSide = Remote.CLIENT_PATH, serverSide = Remote.SERVER_PATH)
     public static CommonProxy proxy;
     public static ClientProxy client;
 

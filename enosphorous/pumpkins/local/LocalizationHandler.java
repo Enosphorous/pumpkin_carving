@@ -1,15 +1,15 @@
 package enosphorous.pumpkins.local;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
-import enosphorous.pumpkins.common.Reference;
+import enosphorous.pumpkins.common.Remote;
 
 public class LocalizationHandler{
 
 public static void init(){
 	
-	if (Reference.FORCE_DEBUG){
+	if (Remote.FORCE_DEBUG){
 		
-		System.out.println("[CHATEAU ROMANI] Found and localized " + Reference.LANGUAGE_COUNT + " language(s).");
+		System.out.println("[CHATEAU ROMANI] Found and localized " + Remote.LANGUAGE_COUNT + " language(s).");
 		
 	}
 
