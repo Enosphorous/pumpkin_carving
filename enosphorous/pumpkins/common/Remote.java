@@ -31,12 +31,7 @@ public class Remote {
 	public static final int IRON_DURABILITY = 115;
 	public static final int GOLD_DURABILITY = 18;
 	public static final int DIAMOND_DURABILITY = 200;
-	
-	/**
-	 * Compatiblity variables.
-	 */
 
-	public static final int MUD_DURABILITY = 32;
-	public static final int AMETHYST_DURABILITY = 230;
+
 	
 }
