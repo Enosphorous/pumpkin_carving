@@ -11,6 +11,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import enosphorous.pumpkins.local.LocalizationHandler;
 import enosphorous.pumpkins.block.Blocks;
 import enosphorous.pumpkins.client.ClientProxy;
+import enosphorous.pumpkins.compatibility.BOP;
 import enosphorous.pumpkins.handlers.CarvingHandler;
 import enosphorous.pumpkins.handlers.LootHandler;
 import enosphorous.pumpkins.handlers.RecipeHandler;
@@ -49,6 +50,12 @@ public class Pumpkin {
         if (ConfigLoader.loot){
         LootHandler.dewheedlize();
         }
+        
+        /**
+         * Doing some compatibility things.
+         */
+        
+        BOP.getCompatiblity();
         
         MinecraftForge.EVENT_BUS.register(new CarvingHandler());
         GameRegistry.registerWorldGenerator(new Generator());
