@@ -18,6 +18,7 @@ public class ToolMaterial {
 	
 	public static EnumToolMaterial MUD_CARVER;
 	public static EnumToolMaterial AMETHYST_CARVER;
+	public static EnumToolMaterial THAUMIUM_CARVER;
 	
 	public static void init(){
 		
@@ -29,6 +30,7 @@ public class ToolMaterial {
 		
 		MUD_CARVER = EnumHelper.addToolMaterial("MUD_CARVER", 0, Remote.MUD_DURABILITY, 1, 1, 0);
 		AMETHYST_CARVER = EnumHelper.addToolMaterial("AMETHYST_CARVER", 0, Remote.AMETHYST_DURABILITY, 1, 7, 0);
+		THAUMIUM_CARVER = EnumHelper.addToolMaterial("THAUMIUM_CARVER", 0, Remote.THAUMIUM_DURABILITY, 1, 6, 0);
 		
 	}
 

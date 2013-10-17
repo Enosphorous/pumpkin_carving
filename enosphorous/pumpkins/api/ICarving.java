@@ -2,6 +2,7 @@ package enosphorous.pumpkins.api;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.util.EnumChatFormatting;
 
 public interface ICarving {
 	
@@ -31,6 +32,5 @@ public interface ICarving {
 	 * modification add-ons and other fun stuff.
 	 */
 	public int durability();
-
 
 }

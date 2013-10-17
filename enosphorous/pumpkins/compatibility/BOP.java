@@ -43,8 +43,8 @@ public class BOP {
 		Item amethyst = Allocator.getAmythest();
 		ItemStack amethyst_stack = new ItemStack(amethyst, 1, 2);
 		
-		mudCarver = new ItemCarvingKnife(ConfigLoader.mud_carverID, ToolMaterial.MUD_CARVER).setTextureName("pumpkins:mud_carver");
-		amethystCarver = new ItemCarvingKnife(ConfigLoader.amethyst_carverID, ToolMaterial.AMETHYST_CARVER).setTextureName("pumpkins:amethyst_carver");
+		mudCarver = new ItemCarvingKnife(ConfigLoader.mud_carverID, ToolMaterial.MUD_CARVER).setTextureName("pumpkins:mud_carver").setUnlocalizedName("carver");
+		amethystCarver = new ItemCarvingKnife(ConfigLoader.amethyst_carverID, ToolMaterial.AMETHYST_CARVER).setTextureName("pumpkins:amethyst_carver").setUnlocalizedName("carver");
 		
 		GameRegistry.addShapedRecipe(new ItemStack(mudCarver, 1, 0), new Object[]{"## ", " # ", "@  ", '@', Item.stick, '#', mudball});
 		GameRegistry.addShapedRecipe(new ItemStack(amethystCarver, 1, 0), new Object[]{"## ", " # ", "@  ", '@', Item.stick, '#', amethyst});

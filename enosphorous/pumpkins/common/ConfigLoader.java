@@ -27,6 +27,8 @@ public class ConfigLoader {
 	public static int     mud_carverID                       = 12950;
 	public static int     amethyst_carverID                  = 12951;
 	
+	public static int     thaumium_carverID                  = 12952;
+	
 	public static boolean loot                               = true;
 
     static final String   IDs                                = "ID CONFIGURATION";
@@ -46,9 +48,11 @@ public class ConfigLoader {
             ConfigLoader.iron_carverID = config.get(ConfigLoader.IDs, "iron carver id", 12947).getInt(12947);
             ConfigLoader.gold_carverID = config.get(ConfigLoader.IDs, "gold carver id", 12948).getInt(12948);
             ConfigLoader.diamond_carverID = config.get(ConfigLoader.IDs, "diamond carver id", 12949).getInt(12949);
+            
+            
             ConfigLoader.mud_carverID = config.get(ConfigLoader.IDs, "mud carver id", 12950).getInt(12950);
             ConfigLoader.amethyst_carverID = config.get(ConfigLoader.IDs, "amethyst carver id", 12951).getInt(12951);
-            
+            ConfigLoader.thaumium_carverID = config.get(ConfigLoader.IDs, "thaumium carver id", 12952).getInt(12952);
             
             ConfigLoader.loot = config.get(ConfigLoader.LOOTS, "dungeon loot enabled", true).getBoolean(true);
             

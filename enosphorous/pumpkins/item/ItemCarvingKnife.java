@@ -63,7 +63,7 @@ public class ItemCarvingKnife extends Item implements ICarving
     {
         if ((double)Block.blocksList[par3].getBlockHardness(par2World, par4, par5, par6) != 0.0D)
         {
-            par1ItemStack.damageItem(1, par7EntityLivingBase);
+            par1ItemStack.damageItem(2, par7EntityLivingBase);
         }
 
         return true;

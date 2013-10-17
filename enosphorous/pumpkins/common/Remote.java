@@ -38,5 +38,6 @@ public class Remote {
 
 	public static final int MUD_DURABILITY = 32;
 	public static final int AMETHYST_DURABILITY = 230;
+	public static final int THAUMIUM_DURABILITY = 275;
 	
 }

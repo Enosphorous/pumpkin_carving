@@ -18,5 +18,14 @@ public class Allocator {
 	{
 		return GameRegistry.findItem("BiomesOPlenty", "miscItems");
 	}
+	
+	/**
+	 * Items for Thaumcraft 4.
+	 */
+	
+	public static Item getThaumium()
+	{
+		return GameRegistry.findItem("Thaumcraft", "ItemResource");
+	}
 
 }
