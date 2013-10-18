@@ -19,7 +19,7 @@ public class Blocks {
 		
 		carved_melon = (new BlockCarvedMelon(ConfigLoader.carved_melonID, false)).setHardness(1.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("melon").setTextureName("pumpkins:melon");
 		natural_pumpkin = (new BlockNaturalPumpkin(ConfigLoader.natural_pumpkinID, false)).setHardness(1.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("pumpkin").setTextureName("pumpkins:pumpkin");
-		melon_o_lantern = (new BlockLitMelon(ConfigLoader.lit_melonID, true)).setHardness(1.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("melon").setTextureName("pumpkins:melon").setLightValue(1.0F);
+		melon_o_lantern = (new BlockLantern(ConfigLoader.lit_melonID, true)).setHardness(1.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("melon").setTextureName("pumpkins:melon").setLightValue(1.0F);
 		
 		pumpkin_dropper = new BlockPumpkinDropper(3099, Material.pumpkin).setTextureName("pumpkins:inside_pumpkin").setUnlocalizedName("pump_dropper");
 		melon_dropper = new BlockMelonDropper(3100, Material.pumpkin).setTextureName("pumpkins:inside_melon").setUnlocalizedName("melon_dropper");

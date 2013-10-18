@@ -5,6 +5,7 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
+import net.minecraftforge.event.Event.Result;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import enosphorous.pumpkins.block.Blocks;
@@ -56,9 +57,10 @@ public class CarvingHandler {
 
 			int playerFacing = MathHelper.floor_double((double)((event.entityPlayer.rotationYaw * 4F) / 360f) + 0.5D) &3;
 			
+			if (event.entityPlayer.capabilities.isCreativeMode == false){
 					event.entityPlayer.inventory.consumeInventoryItem(Block.torchWood.blockID);
+			}
 					event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, Blocks.melon_o_lantern.blockID, (2 + playerFacing) % 4, 0);
-					
 					
 				}
 		
@@ -66,10 +68,10 @@ public class CarvingHandler {
 
 			int playerFacing = MathHelper.floor_double((double)((event.entityPlayer.rotationYaw * 4F) / 360f) + 0.5D) &3;
 		
+			if(event.entityPlayer.capabilities.isCreativeMode == false){
 			event.entityPlayer.inventory.consumeInventoryItem(Block.torchWood.blockID);
+			}
 			event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, Block.pumpkinLantern.blockID, (2 + playerFacing) % 4, 0);
-			
-			
 		}
 		
 	}

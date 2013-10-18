@@ -12,8 +12,10 @@ import enosphorous.pumpkins.local.LocalizationHandler;
 import enosphorous.pumpkins.block.Blocks;
 import enosphorous.pumpkins.client.ClientProxy;
 import enosphorous.pumpkins.compatibility.BOP;
+import enosphorous.pumpkins.compatibility.Thaumcraft;
 import enosphorous.pumpkins.handlers.CarvingHandler;
 import enosphorous.pumpkins.handlers.LootHandler;
+import enosphorous.pumpkins.handlers.PumpkinRemovalHandler;
 import enosphorous.pumpkins.handlers.RecipeHandler;
 import enosphorous.pumpkins.item.Items;
 import enosphorous.pumpkins.item.ToolMaterial;
@@ -56,9 +58,11 @@ public class Pumpkin {
          */
         
         BOP.getCompatiblity();
+        Thaumcraft.getCompatiblity();
         
         MinecraftForge.EVENT_BUS.register(new CarvingHandler());
         GameRegistry.registerWorldGenerator(new Generator());
+        MinecraftForge.EVENT_BUS.register(new PumpkinRemovalHandler());
 
 	}
 
