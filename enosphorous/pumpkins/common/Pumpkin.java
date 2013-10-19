@@ -60,6 +60,13 @@ public class Pumpkin {
         BOP.getCompatiblity();
         Thaumcraft.getCompatiblity();
         
+        /**
+         * Generators.
+         * 
+         * - CarvingHandler handles carving. :3
+         * - Generator generates my own pumpkins.
+         * - PumpkinRemovalHandler removes vanilla pumpkins from generation.
+         */
         MinecraftForge.EVENT_BUS.register(new CarvingHandler());
         GameRegistry.registerWorldGenerator(new Generator());
         MinecraftForge.EVENT_BUS.register(new PumpkinRemovalHandler());
