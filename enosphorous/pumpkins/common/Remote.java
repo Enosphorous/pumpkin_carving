@@ -6,7 +6,7 @@ public class Remote {
 	
 	public static final String MOD_ID = "carving";
 	public static final String MOD_NAME = "Carving";
-	public static final String MOD_VERSION = "0.0.1";
+	public static final String MOD_VERSION = "DEV_0.0.2";
 	public static final String MOD_INSTANCE = "carving";
 	
 	public static final String SERVER_PATH = "enosphorous.pumpkins.common.CommonProxy";
