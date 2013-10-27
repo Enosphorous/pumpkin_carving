@@ -2,6 +2,7 @@ package enosphorous.pumpkins.block;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import enosphorous.pumpkins.common.ConfigLoader;
+import enosphorous.pumpkins.itemblock.PumpkinBlank_ItemBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPumpkin;
 import net.minecraft.block.material.Material;
@@ -15,6 +16,8 @@ public class Blocks {
 	public static Block pumpkin_dropper;
 	public static Block melon_dropper;
 	
+	public static Block blank_pumpkin;
+	
 	public static void init(){
 		
 		carved_melon = (new BlockCarvedMelon(ConfigLoader.carved_melonID, false)).setHardness(1.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("melon").setTextureName("pumpkins:melon");
@@ -23,6 +26,8 @@ public class Blocks {
 		
 		pumpkin_dropper = new BlockPumpkinDropper(3099, Material.pumpkin).setTextureName("pumpkins:inside_pumpkin").setUnlocalizedName("pump_dropper");
 		melon_dropper = new BlockMelonDropper(3100, Material.pumpkin).setTextureName("pumpkins:inside_melon").setUnlocalizedName("melon_dropper");
+		
+		blank_pumpkin = new PumpkinBlank(ConfigLoader.blank_pumpkinID, Material.pumpkin);
 		
 	}
 	
@@ -34,6 +39,8 @@ public class Blocks {
 		
 		GameRegistry.registerBlock(pumpkin_dropper);
 		GameRegistry.registerBlock(melon_dropper);
+		
+		GameRegistry.registerBlock(blank_pumpkin, PumpkinBlank_ItemBlock.class);
 		
 	}
 

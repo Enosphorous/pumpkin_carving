@@ -20,14 +20,12 @@ public class ConfigLoader {
 	public static int     gold_carverID                      = 12948;
 	public static int     diamond_carverID                   = 12949;
 	
+	public static int     blank_pumpkinID                    = 2951;
+	
 	/**
 	 * Compatiblity.
 	 */
-	
-	public static int     mud_carverID                       = 12950;
-	public static int     amethyst_carverID                  = 12951;
-	
-	public static int     thaumium_carverID                  = 12952;
+
 	
 	public static boolean loot                               = true;
 
@@ -42,17 +40,13 @@ public class ConfigLoader {
             ConfigLoader.natural_pumpkinID = config.get(ConfigLoader.IDs, "natural pumpkin id", 2943).getInt(2943);
             ConfigLoader.carved_melonID = config.get(ConfigLoader.IDs, "carved melon id", 2944).getInt(2944);
             ConfigLoader.lit_melonID = config.get(ConfigLoader.IDs, "melon o' lantern id", 2950).getInt(2950);
+            ConfigLoader.blank_pumpkinID = config.get(ConfigLoader.IDs, "blank pumpkin id", 2951).getInt(2951);
             
             ConfigLoader.wood_carverID = config.get(ConfigLoader.IDs, "wood carver id", 12945).getInt(12945);
             ConfigLoader.stone_carverID = config.get(ConfigLoader.IDs, "stone carver id", 12946).getInt(12946);
             ConfigLoader.iron_carverID = config.get(ConfigLoader.IDs, "iron carver id", 12947).getInt(12947);
             ConfigLoader.gold_carverID = config.get(ConfigLoader.IDs, "gold carver id", 12948).getInt(12948);
             ConfigLoader.diamond_carverID = config.get(ConfigLoader.IDs, "diamond carver id", 12949).getInt(12949);
-            
-            
-            ConfigLoader.mud_carverID = config.get(ConfigLoader.IDs, "mud carver id", 12950).getInt(12950);
-            ConfigLoader.amethyst_carverID = config.get(ConfigLoader.IDs, "amethyst carver id", 12951).getInt(12951);
-            ConfigLoader.thaumium_carverID = config.get(ConfigLoader.IDs, "thaumium carver id", 12952).getInt(12952);
             
             ConfigLoader.loot = config.get(ConfigLoader.LOOTS, "dungeon loot enabled", true).getBoolean(true);
             

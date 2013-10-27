@@ -8,17 +8,15 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
-import enosphorous.pumpkins.local.LocalizationHandler;
 import enosphorous.pumpkins.block.Blocks;
 import enosphorous.pumpkins.client.ClientProxy;
-import enosphorous.pumpkins.compatibility.BOP;
-import enosphorous.pumpkins.compatibility.Thaumcraft;
 import enosphorous.pumpkins.handlers.CarvingHandler;
 import enosphorous.pumpkins.handlers.LootHandler;
 import enosphorous.pumpkins.handlers.PumpkinRemovalHandler;
 import enosphorous.pumpkins.handlers.RecipeHandler;
 import enosphorous.pumpkins.item.Items;
 import enosphorous.pumpkins.item.ToolMaterial;
+import enosphorous.pumpkins.local.LocalizationHandler;
 import enosphorous.pumpkins.world.Generator;
 
 @Mod(modid=Remote.MOD_ID, name=Remote.MOD_NAME, version=Remote.MOD_VERSION)
@@ -52,13 +50,6 @@ public class Pumpkin {
         if (ConfigLoader.loot){
         LootHandler.dewheedlize();
         }
-        
-        /**
-         * Doing some compatibility things.
-         */
-        
-        BOP.getCompatiblity();
-        Thaumcraft.getCompatiblity();
         
         /**
          * Generators.

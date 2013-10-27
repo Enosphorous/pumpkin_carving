@@ -10,9 +10,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import enosphorous.pumpkins.api.ICarving;
+import enosphorous.pumpkins.api.ICarveStats;
 
-public class ItemCarvingKnife extends Item implements ICarving
+public class ItemCarvingKnife extends Item implements ICarveStats
 {
     private float weaponDamage;
     private final EnumToolMaterial toolMaterial;
