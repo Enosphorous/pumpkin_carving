@@ -12,7 +12,7 @@ public class RecipeHandler {
 	public static void init(){
 		
 		/**Crafting a Melon o' Lantern*/
-		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.melon_o_lantern, 1, 0), new Object[]{Block.torchWood, Blocks.carved_melon});
+		//GameRegistry.addShapelessRecipe(new ItemStack(Blocks.melon_o_lantern, 1, 0), new Object[]{Block.torchWood, Blocks.carved_melon});
 		
 		/**Crafting Pumpkin Carvers*/
 		GameRegistry.addShapedRecipe(new ItemStack(Items.wood_carver, 1, 0), new Object[]{"## ", " # ", "@  ", '@', Item.stick, '#', Block.planks});
