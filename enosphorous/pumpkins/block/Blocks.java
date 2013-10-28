@@ -1,47 +1,24 @@
 package enosphorous.pumpkins.block;
 
+import net.minecraft.block.Block;
 import cpw.mods.fml.common.registry.GameRegistry;
 import enosphorous.pumpkins.common.ConfigLoader;
-import enosphorous.pumpkins.itemblock.PumpkinBlank_ItemBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockPumpkin;
-import net.minecraft.block.material.Material;
+import enosphorous.pumpkins.itemblock.ItemBlockMelon;
+import enosphorous.pumpkins.tile.TileEntityMelon;
 
 public class Blocks {
-	
-	public static Block natural_pumpkin;
-	public static Block carved_melon;
-	public static Block melon_o_lantern;
-	
-	public static Block pumpkin_dropper;
-	public static Block melon_dropper;
-	
-	public static Block blank_pumpkin;
+
+	public static Block melon;
+	public static Block melonLit;
 	
 	public static void init(){
-		
-		carved_melon = (new BlockCarvedMelon(ConfigLoader.carved_melonID, false)).setHardness(1.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("melon").setTextureName("pumpkins:melon");
-		natural_pumpkin = (new BlockNaturalPumpkin(ConfigLoader.natural_pumpkinID, false)).setHardness(1.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("pumpkin").setTextureName("pumpkins:pumpkin");
-		melon_o_lantern = (new BlockLantern(ConfigLoader.lit_melonID, true)).setHardness(1.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("melon").setTextureName("pumpkins:melon").setLightValue(1.0F);
-		
-		pumpkin_dropper = new BlockPumpkinDropper(3099, Material.pumpkin).setTextureName("pumpkins:inside_pumpkin").setUnlocalizedName("pump_dropper");
-		melon_dropper = new BlockMelonDropper(3100, Material.pumpkin).setTextureName("pumpkins:inside_melon").setUnlocalizedName("melon_dropper");
-		
-		blank_pumpkin = new PumpkinBlank(ConfigLoader.blank_pumpkinID, Material.pumpkin);
-		
+		melon = new BlockMelon(ConfigLoader.melonID).setHardness(1f).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("melon");
+		melonLit = new BlockMelon(ConfigLoader.melonID).setHardness(1f).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("melonLit").setLightValue(1F);
 	}
 	
 	public static void register(){
-		
-		GameRegistry.registerBlock(carved_melon);
-		GameRegistry.registerBlock(natural_pumpkin);
-		GameRegistry.registerBlock(melon_o_lantern);
-		
-		GameRegistry.registerBlock(pumpkin_dropper);
-		GameRegistry.registerBlock(melon_dropper);
-		
-		GameRegistry.registerBlock(blank_pumpkin, PumpkinBlank_ItemBlock.class);
-		
+		GameRegistry.registerBlock(melon, ItemBlockMelon.class, "PumpkinCarverMelon");
+		GameRegistry.registerBlock(melonLit, ItemBlockMelon.class, "PumpkinCarverMelonLit");
+		GameRegistry.registerTileEntity(TileEntityMelon.class, "PumpkinCarverMelonTile");
 	}
-
 }
