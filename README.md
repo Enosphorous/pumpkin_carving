@@ -3,6 +3,7 @@
 ## Authors
 
 - **Enosphorous** - Creator, coder, translator, creative, artist, etc.
+- **LordBlackHole** - Genius coder.
 
 ## Credits
 
